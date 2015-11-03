@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-alipay"
+		version="1.0.0">
+
+    <name>Alipay</name>
+    <description>Cordova Alipay Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,alipay</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0"/>
+	</engines>
+  
+    <js-module src="www/alipay.js" name="alipay">
+        <clobbers target="alipay" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Alipay">
+                <param name="android-package" value="com.yumemor.cordova.alipay.AlipayPlugin"/>
+            </feature>
+        </config-file>
+		
+		<!--配置activity-->
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity
+				android:name="com.alipay.sdk.app.H5PayActivity"
+				android:configChanges="orientation|keyboardHidden|navigation"
+				android:exported="false"
+				android:screenOrientation="behind"
+				android:windowSoftInputMode="adjustResize|stateHidden" >
+			</activity>
+			<activity
+				 android:name="com.alipay.sdk.auth.AuthActivity"
+				 android:configChanges="orientation|keyboardHidden|navigation"
+				 android:exported="false"
+				 android:screenOrientation="behind" >
+			</activity>
+        </config-file>
+		
+		<!--添加权限-->
+		<config-file target="AndroidManifest.xml" parent="/*">  
+            <uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+			<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+        </config-file> 
+	
+		<!--编译-->
+		<source-file src="src/android/libs/alipaysdk.jar" target-dir="libs" framework="true" />
+		
+        <source-file src="src/android/alipay/AlipayPlugin.java" target-dir="src/com/yumemor/cordova/alipay" />
+		<source-file src="src/android/alipay/PayRun.java" target-dir="src/com/yumemor/cordova/alipay" />
+		<source-file src="src/android/util/Base64.java" target-dir="src/com/yumemor/cordova/util" />
+		<source-file src="src/android/util/SignUtils.java" target-dir="src/com/yumemor/cordova/util" />
+		<source-file src="src/android/alipay/PayKeys.java" target-dir="src/com/yumemor/cordova/alipay" />
+		<source-file src="src/android/bean/PayResult.java" target-dir="src/com/yumemor/cordova/bean" />
+
+    </platform>
+
+</plugin>
