@@ -20,44 +20,37 @@
 
 	**yourProject\plugins\alipay\src\android\alipay\PayKeys.java**
 	
-	```
-		package com.yumemor.cordova.alipay;
+	package com.yumemor.cordova.alipay;
 
-		/**
-		 * 商户配置信息
-		 * 
-		 * @author yy
-		 * 
-		 */
-		public final class PayKeys {
+	/**
+	 * 商户配置信息
+	 * 
+	 * @author yy
+	 * 
+	 */
+	public final class PayKeys {
 
-			// 合作身份者id，以2088开头的16位纯数字
-			public static final String DEFAULT_PARTNER = "";
-		
-			// 收款支付宝账号
-			public static final String DEFAULT_SELLER = "";
-		
-			// 商户私钥 自助生成
-			public static final String PRIVATE = "";
-		
-			// 支付宝默认公钥 请勿修改
-			public static final String PUBLIC = "";
+		// 合作身份者id，以2088开头的16位纯数字
+		public static final String DEFAULT_PARTNER = "";
+	
+		// 收款支付宝账号
+		public static final String DEFAULT_SELLER = "";
+	
+		// 商户私钥 自助生成
+		public static final String PRIVATE = "";
+	
+		// 支付宝默认公钥 请勿修改
+		public static final String PUBLIC = "";
 
-		}
-
-	```
-
+	}
+	
 **在项目根目录添加插件:**
 	
-	```
-		cordova plugins add alipay
-	```
+	cordova plugins add alipay
 
 **把插件目录的www/alipay.js放到项目中**
 
-	```javascript
-		window.plugins.Pgalipay.alipay(out_trade_no,subject,body,total_fee,successCallback,errorCallback,callbackUrl);
-	```
+	window.plugins.Pgalipay.alipay(out_trade_no,subject,body,total_fee,successCallback,errorCallback,callbackUrl);
 
 **参数说明:**
 
