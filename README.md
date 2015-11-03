@@ -14,15 +14,13 @@
 
 	Android
 
-<!--more-->
-
 #### 使用
 
 	在添加插件之前，需要配置与支付宝签约的帐号密匙
 
 	**yourProject\plugins\alipay\src\android\alipay\PayKeys.java**
 	
-	```java
+	```
 		package com.yumemor.cordova.alipay;
 
 		/**
@@ -51,7 +49,7 @@
 
 **在项目根目录添加插件:**
 	
-	```cordova
+	```
 		cordova plugins add alipay
 	```
 
