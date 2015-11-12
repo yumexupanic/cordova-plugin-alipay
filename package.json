@@ -1,6 +1,6 @@
 {
-  "name": "cordova-plugin-alipay",
-  "version": "1.0.0",
+  "name": "cordova-plugin-alipay-pay",
+  "version": "1.0.2",
   "cordova_name": "Alipay",
   "description": "Cordova Alipay Plugin",
   "license": "MIT",

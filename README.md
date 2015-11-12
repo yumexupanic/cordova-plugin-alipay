@@ -16,9 +16,9 @@
 
 #### 使用
 
-	在添加插件之前，需要配置与支付宝签约的帐号密匙
+在添加插件之前，需要配置与支付宝签约的帐号密匙
 
-	**yourProject\plugins\alipay\src\android\alipay\PayKeys.java**
+**yourProject\plugins\alipay\src\android\alipay\PayKeys.java**
 	
 	package com.yumemor.cordova.alipay;
 
@@ -44,11 +44,11 @@
 
 	}
 	
-**在项目根目录添加插件:**
+**添加插件到你的项目**
 	
-	cordova plugins add alipay
+	cordova plugins add cordova-plugin-alipay-pay
 
-**把插件目录的www/alipay.js放到项目中**
+**js调用**
 
 	window.plugins.Pgalipay.alipay(out_trade_no,subject,body,total_fee,successCallback,errorCallback,callbackUrl);
 
@@ -68,15 +68,15 @@
 
 **支付宝:**
 	
-![image](http://7xnxsw.com1.z0.glb.clouddn.com/Cordova-alipay-pugins/Screenshot_2015-11-02-14-08-50.png)
+![image](http://7xnxsw.com1.z0.glb.clouddn.com/cordova-alipay-plugin/Screenshot_2015-11-02-14-08-50.png)
 
 **HTML5:**
 	
-![image](http://7xnxsw.com1.z0.glb.clouddn.com/Cordova-alipay-pugins/Screenshot_2015-11-02-14-09-23.png)
+![image](http://7xnxsw.com1.z0.glb.clouddn.com/cordova-alipay-plugin/Screenshot_2015-11-02-14-09-23.png)
 
 **回调:**
 	
-![image](http://7xnxsw.com1.z0.glb.clouddn.com/Cordova-alipay-pugins/Screenshot_2015-11-02-14-09-03.png)
+![image](http://7xnxsw.com1.z0.glb.clouddn.com/cordova-alipay-plugin/Screenshot_2015-11-02-14-09-03.png)
 
 * 注意
 
