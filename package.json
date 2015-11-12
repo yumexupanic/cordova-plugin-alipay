@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "cordova_name": "Alipay",
   "description": "Cordova Alipay Plugin",
-  "license": " MIT",
+  "license": "MIT",
   "author": "yumemor",
   "cordova": {
     "platforms": [
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "pay",
-	"alipay",
+    "alipay",
     "cordova",
     "ecosystem:cordova",
     "cordova-android"
@@ -30,5 +30,9 @@
   "bugs": {
     "url": "https://github.com/yumemor/cordova-plugin-alipay/issues"
   },
-  "homepage": "https://github.com/yumemor/cordova-plugin-alipay.git#readme"
+  "homepage": "https://github.com/yumemor/cordova-plugin-alipay.git#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
