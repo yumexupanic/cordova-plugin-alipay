@@ -50,7 +50,7 @@
 
 **js调用**
 
-	window.plugins.Pgalipay.alipay(out_trade_no,subject,body,total_fee,successCallback,errorCallback,callbackUrl);
+	window.plugins.Alipay.pay(out_trade_no,subject,body,total_fee,successCallback,errorCallback,callbackUrl);
 
 **参数说明:**
 
